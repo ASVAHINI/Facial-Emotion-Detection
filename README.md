@@ -1,56 +1,67 @@
 # FACIAL EMOTION DETECTION USING DL
 
-Emotion_Classification using FER_Dataset and Web_app Deployment using Flask
---------------------------------------------------------------------------------------------------------------------------------
+# 😊 Facial Emotion Detection
 
-Introduction:
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-Facial recognition technology has gained significant attention in recent years due to its diverse applications in various fields, including security systems, identity verification, and personalized user experiences. This report presents the development and implementation of a facial recognition project using Convolutional Neural Networks (CNNs). The project aims to accurately detect and classify faces in real-time, enabling the identification of individuals based on their unique facial features.
+This project aims to build a **Facial Emotion Detection System** using a machine learning model trained on the **FER2013** dataset. The system classifies facial expressions into seven categories: **Anger, Disgust, Fear, Happy, Sad, Surprise, Neutral**.
 
-Abstract:
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-The facial recognition project utilizes CNNs, a deep learning algorithm renowned for its exceptional performance in image recognition tasks. The project involves multiple steps, including dataset creation, model training, and face classification. The project's objective is to develop an accurate and efficient facial recognition system that can recognize individuals and classify them into predetermined categories.
+![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)
+![TensorFlow](https://img.shields.io/badge/TensorFlow-2.x-orange.svg)
+![Colab](https://img.shields.io/badge/Google-Colab-brightgreen.svg)
+![Emotion Detection](https://img.shields.io/badge/Emotion%20Detection-Deep%20Learning-blueviolet.svg)
 
-Steps Followed:
-Dataset Creation:
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-The first step in the project involves creating a comprehensive dataset of facial images. This dataset serves as the foundation for training the facial recognition model. The dataset includes images of individuals from various angles, lighting conditions, and expressions, capturing the variations in facial features.
+---
 
-Data Preprocessing:
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-Prior to training the CNN model, the dataset undergoes preprocessing steps to enhance the training process. This includes resizing the images to a standard size, normalizing pixel values, and augmenting the dataset through techniques like image rotation, flipping, and zooming. Data augmentation helps to increase the diversity of the dataset and improves the model's ability to generalize.
+## 📑 Features
+- **Data Loading:** Reads the FER2013 dataset.
+- **Data Preprocessing:** Prepares the data for training and validation.
+- **Model Training:** Uses TensorFlow for training a neural network model.
+- **Emotion Mapping:** Maps predicted labels to emotion categories.
 
-Model Architecture:
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-The CNN model architecture is designed to effectively learn and extract meaningful features from facial images. It typically consists of multiple convolutional layers for feature extraction, followed by fully connected layers for classification. The architecture may include additional components such as pooling layers, dropout layers, and activation functions to improve model performance.
+---
 
-Model Training:
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-The dataset is divided into training and validation sets. The CNN model is trained on the training set using backpropagation and gradient descent optimization algorithms. During training, the model learns to identify unique facial features that distinguish one individual from another. The model's performance is evaluated on the validation set, and adjustments are made to the model's parameters to optimize its accuracy.
+## 📂 Project Structure
 
-Model Testing and Evaluation:
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-Once the model is trained, it is evaluated on a separate test set that was not used during training. The trained model is deployed to recognize and classify faces in real-time. The accuracy of the model is measured by comparing the predicted labels with the ground truth labels. Evaluation metrics such as accuracy, precision, recall, and F1 score are used to assess the model's performance.
+🚀 How to Run the Project
+1. Clone the repository:
+   ```sh
+   git clone https://github.com/your-username/facial-emotion-detection.git
+Open the notebook in Google Colab:
+sh
+Copy
+Edit
+https://colab.research.google.com/
+Follow the steps in the notebook:
+Mount Google Drive.
+Load and preprocess the dataset.
+Train the model.
+Evaluate and visualize the results.
+🧰 Requirements
+Python 3.8 or higher
+TensorFlow 2.x
+Pandas, NumPy, Matplotlib
+Google Colab for execution
+Install the required packages:
 
-Real-Time Face Recognition:
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-In the final step, the trained model is integrated into a real-time face recognition system. The system captures live video or images from a webcam, detects faces using the trained model, and matches them with the stored representations of known individuals. The system can identify individuals in real-time and perform specific actions based on their recognition, such as granting access or displaying personalized information.
+sh
+Copy
+Edit
+pip install tensorflow pandas numpy matplotlib
+📊 Sample Code
+python
+Copy
+Edit
+# Load the dataset
+df = pd.read_csv("/content/drive/MyDrive/fer2013/fer2013.csv")
 
-Features Included:
-Development of Webpage using Flask:
------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-We have developed a webpage using Flask which transfers the image in the form of base 64 String Format and apply the model deployed and calculate the probabilitscore of the image given as input.Here is the Model Deployment that is shown below.
+# Label to emotion mapping
+label_to_text = {0: 'Anger', 1: 'Disgust', 2: 'Fear', 3: 'Happy', 4: 'Sad', 5: 'Surprise', 6: 'Neutral'}
 
-image
+# Display the unique emotions in the dataset
+print(df.emotion.unique())
+🛡️ License
+This project is licensed under the MIT License. See the LICENSE file for details.
 
-After the Image Uploaded:
-
-image
-
-#Real Time Facial Emotion Detection Implementation:
-
-image
-
-Conclusion:
------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-The facial recognition project successfully implements a facial recognition system using CNNs. By following the aforementioned steps, the project achieves accurate face detection, classification, and real-time recognition capabilities. The developed system holds promising applications in various domains, including security, surveillance, and personalized user experiences. Future work may involve further optimization of the model architecture, exploring additional data augmentation techniques, and expanding the dataset to enhance the system's performance and robustness
+💡 Future Improvements
+Add a more robust CNN model.
+Implement real-time emotion detection using a webcam.
+Deploy the model as a web application.
