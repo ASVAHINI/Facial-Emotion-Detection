@@ -48,8 +48,15 @@ Edit
 pip install tensorflow pandas numpy matplotlib
 📊 Sample Code
 python
-Copy
-Edit
+# Load the dataset
+df = pd.read_csv("/content/drive/MyDrive/fer2013/fer2013.csv")
+
+# Label to emotion mapping
+label_to_text = {0: 'Anger', 1: 'Disgust', 2: 'Fear', 3: 'Happy', 4: 'Sad', 5: 'Surprise', 6: 'Neutral'}
+
+# Display the unique emotions in the dataset
+print(df.emotion.unique())
+
 # Load the dataset
 df = pd.read_csv("/content/drive/MyDrive/fer2013/fer2013.csv")
 
