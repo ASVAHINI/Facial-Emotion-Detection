@@ -24,7 +24,7 @@ This project aims to build a **Facial Emotion Detection System** using a machine
 🚀 How to Run the Project
 1. Clone the repository:
    ```sh
-   git clone https://github.com/your-username/facial-emotion-detection.git
+   git clone https://github.com/ASVAHINI/facial-emotion-detection.git
 Open the notebook in Google Colab:
 sh
 Copy
@@ -41,10 +41,6 @@ TensorFlow 2.x
 Pandas, NumPy, Matplotlib
 Google Colab for execution
 Install the required packages:
-
-sh
-Copy
-Edit
 pip install tensorflow pandas numpy matplotlib
 📊 Sample Code
 python
